@@ -1,0 +1,2 @@
+vi /etc/resolv.conf
+read
