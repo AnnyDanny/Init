@@ -1,2 +1,32 @@
-vi /etc/resolv.conf
-read
+vi /etc/resolv.conf && dig unit.ua
+address is contained in the file: resolv.conf;
+
+resolv.conf is the name of a computer file used in various operating systems to configure the system's Domain Name System (DNS) resolver. The file is a plain-text file usually created by the network administrator or by applications that manage the configuration tasks of the system. The resolvconf program is one such program on FreeBSD or other Unix machines which manages the resolv.conf file.
+
+Unless it is told to query a specific name server, dig will try each of the servers listed in
+       /etc/resolv.conf. If no usable server addresses are found, dig will send the query to the
+       local host.
+
+
+
+368/5000
+Уведомление macOS
+#
+# Этот файл не запрашивается для разрешения имени хоста DNS, адреса
+# или механизм маршрутизации запросов DNS, используемый большинством
+# процессов в этой системе.
+#
+# Чтобы просмотреть конфигурацию DNS, используемую этой системой, используйте:
+# scutil --dns
+#
+# СМОТРИТЕ ТАКЖЕ
+# dns-sd (1), scutil (8)
+
+
+
+configd
+
+$ host google.com
+$ dig google.com
+$ ping google.com
+$ nslookup your-domain.com
