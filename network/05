@@ -4,3 +4,6 @@ dig slash16.org
 петатает больше информации и о других адресах (А)
 dig +short slash16.org 
 выводить только А-адреса
+
+можно еще:
+nslookup slash16.org
