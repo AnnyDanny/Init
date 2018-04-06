@@ -1,0 +1,35 @@
+ввод:
+ nslookup 52.85.182.25 
+ вывод:
+ Server:		10.51.1.253
+Address:	10.51.1.253#53
+
+Non-authoritative answer:
+25.182.85.52.in-addr.arpa	name = server-52-85-182-25.fra50.r.cloudfront.net.
+
+Authoritative answers can be found from:
+85.52.in-addr.arpa	nameserver = x4.amazonaws.org.
+85.52.in-addr.arpa	nameserver = pdns1.ultradns.net.
+85.52.in-addr.arpa	nameserver = x2.amazonaws.com.
+85.52.in-addr.arpa	nameserver = x1.amazonaws.com.
+85.52.in-addr.arpa	nameserver = x3.amazonaws.org.
+pdns1.ultradns.net	internet address = 204.74.108.1
+pdns1.ultradns.net	has AAAA address 2001:502:f3ff::1
+
+ для вывода только амазона:
+ nslookup 52.85.182.25 | awk ' /'nameserver'/ {print $0;} ' 
+
+ 85.52.in-addr.arpa	nameserver = x2.amazonaws.com.
+85.52.in-addr.arpa	nameserver = x1.amazonaws.com.
+85.52.in-addr.arpa	nameserver = x4.amazonaws.org.
+85.52.in-addr.arpa	nameserver = pdns1.ultradns.net.
+85.52.in-addr.arpa	nameserver = x3.amazonaws.org.
+
+
+
+provider of slash16.org is:
+ 85.52.in-addr.arpa	nameserver = x2.amazonaws.com.
+85.52.in-addr.arpa	nameserver = x1.amazonaws.com.
+85.52.in-addr.arpa	nameserver = x4.amazonaws.org.
+85.52.in-addr.arpa	nameserver = pdns1.ultradns.net.
+85.52.in-addr.arpa	nameserver = x3.amazonaws.org.
