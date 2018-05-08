@@ -1,0 +1,10 @@
+Type the following ps command to display all running process:
+# ps -aux | less
+
+
+Either pass -A or -e option to show all processes on your server/workstation powered by Linux:
+# ps -A
+# ps -e
+
+
+top!

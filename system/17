@@ -1,0 +1,7 @@
+To list out all of the active iptables rules by specification, run the iptables command with the -S option:
+
+sudo iptables -S
+
+To output all of the active iptables rules in a table, run the iptables command with the -L option:
+
+sudo iptables -L

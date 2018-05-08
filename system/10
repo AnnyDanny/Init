@@ -1,0 +1,14 @@
+1. Fdisk (“fixed disk” – жесткий диск)
+
+Fdisk – это популярный и мощный инструмент командной строки, используется для создания и управления таблицей разделов диска
+Он поддерживает GPT, MBR, Sun, SGI и BSD таблицы разделов. Вы можете запустить команду fdisk с удобным для Вас текстовым интерфейсом. Чтобы создавать, изменять размер, удалять, модифицировать, копировать и перемещать разделы на жестком диске.
+
+$ sudo fdisk -l
+
+or
+
+sudo lsblk -o
+
+The df command will only show you mounted partitions, but can give you useful information. See man df for the many useful options
+
+lsblk
