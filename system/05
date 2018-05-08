@@ -1,0 +1,13 @@
+ps -ef |grep "sshd"
+this will give you the sshd server process info
+
+
+ps -ef
+покажет вам все запущенные процессы. Тогда, если у вас есть представление о том, что вы ищете, используйте grep для фильтрации;
+
+Существует простой способ проверить, работает ли служба
+
+systemctl status service_name
+Try:
+
+systemctl status postgres

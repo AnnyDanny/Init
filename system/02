@@ -1,0 +1,6 @@
+sudo hostname my-new-hostname
+меняет название hostname
+sudo gedit /etc/hostname
+открывается редактор, где можно ввести new hostname:
+на пример: my-new-hostname
+чтобы потом проверить hostname, нужно просто ввести hostname и отобраиться новое имя.

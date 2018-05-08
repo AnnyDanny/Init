@@ -1,0 +1,8 @@
+netstat command displays network statistics. In its basic form (what you typed), current local connections to your computer are displayed. You see something like this if another computer is using one of your PC’s shared folders
+netstat -a
+
+
+https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%253A+TheGeekStuff+%2528The+Geek+Stuff%2529
+
+
+$ who | cut -d' ' -f1 | sort | uniq

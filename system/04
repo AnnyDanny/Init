@@ -1,0 +1,13 @@
+
+You need to use the who command, to print who is logged on. It also displays the time of last system boot. Use the last command to display system reboot and shutdown date and time, run:
+who -b
+
+system boot 2018-05-08 14:16
+
+
+Use the last command to display listing of last logged in users and system last reboot time and date, enter:
+last reboot | less
+
+
+Or, better try:
+$ last reboot | head -1
