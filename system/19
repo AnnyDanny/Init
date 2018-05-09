@@ -1,0 +1,4 @@
+iptables -A INPUT -j DROP
+
+проверить:
+sudo iptables -S
