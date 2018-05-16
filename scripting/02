@@ -1,5 +1,14 @@
 Напишите сценарий, который обновляет все источники пакетов, затем все пакеты, а затем записывает все в файл с именем /var/log/update_script.log. Создайте запланированную задачу для этого скрипта один раз в неделю в 4 часа ночи.
 
+как вывод команды записать в файл?????
+что такое crontab ???
+Кронтаб раз в неделю должен вызывать команды апдэйт и апгрэйд и то, что выводят эти команды, записывать в файл /var/log/update_script.log
+
+записать в файл:
+sudo apt-get update && sudo apt-get upgrade >> test; crontab 0 1 * * 5 /var/log/update_script.log
+cat test
+
+
 01. sudo apt-get update
 02. sudo apt-get upgrade
 
@@ -16,4 +25,40 @@ https://eax.me/debian-packages/ !!!
 
 Обновление всех пакетов (с подробностями):
 sudo apt-get -V upgrade
+
+
+
+
+
+Execute every Friday 1AM
+
+So if we want to schedule the script to run at 1AM every Friday, we would need the following cronjob:
+
+0 1 * * 5 /bin/execute/this/script.sh
+
+
+sudo apt-get update && sudo apt-get upgrade >> sudo crontab 0 1 * * 5 /var/log/update_script.log
+
+# выполнять задание по понедельникам в 1 час 15 минут ночи
+15 1 * * 1 /home/u12345/script.pl
+
+* 4 * * 1 
+
+sudo nano /etc/crontab, не?
+
+
+
+Заходим под пользователем 'alexander'
+Вводим в консоли: echo '* * * */1 * (команда запуска файла)' > alexcron
+Вводим в консоли: crontab alexcron
+Проверяем нашу запись: crontab -l должна появиться запись * * * */1 * (команда запуска файла)
+Выполняем в консоли: export EDITOR=nano
+Редактируем: crontab -e -->откроется редактор nano,сделать изменения в файле, затем
+'Ctr+X', затем 'Y', затем 'Enter'
+Проверяем наш измененный файл: crontab -l
+
+
+последний вариант:
+sudo apt-get update && sudo apt-get upgrade >> test | crontab test 04**4 /var/log/update_script.log
+
 
