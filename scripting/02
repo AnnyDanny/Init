@@ -30,6 +30,17 @@ sudo apt-get -V upgrade
 
 
 
+
+echo "sudo apt-get update && sudo apt-get upgrade" > srcipts
+chmod 755 scripts
+crontab 04**4 scripts - one of the week - >> /var/log/update_script.log
+***** - every minute
+
+
+
+
+
+
 Execute every Friday 1AM
 
 So if we want to schedule the script to run at 1AM every Friday, we would need the following cronjob:
@@ -60,5 +71,16 @@ sudo nano /etc/crontab, не?
 
 последний вариант:
 sudo apt-get update && sudo apt-get upgrade >> test | crontab test 04**4 /var/log/update_script.log
+
+
+еще один последний вариант:
+echo "apt-get update >> /var/log/update_script.log && apt-get upgrade >> /var/log/update_script.log" > file03
+echo "0 4 * * 1 sudo sh file03" | crontab
+
+/var/log/update_script.log" | crontab
+crontab - l - показывает содержимое файла
+crontab -e - открывает файл
+
+
 
 

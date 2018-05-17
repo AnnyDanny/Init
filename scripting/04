@@ -16,3 +16,59 @@ When does Linux send a root mail and how to force it for testing purposes?
 echo "Test" | mail -s "Test " root
 
 
+crontab 00***
+каждый день в полночь
+
+md5???
+не забыть о chmod
+
+
+
+md5sum -b /etc/crontab >> test
+cat test
+показывает бинарный вид хеш файла
+ 
+
+
+ Use the command without any options to display the hash value and the filename.
+md5sum file1.txt
+
+Here's the output this command produced on our system:
+[Documents]$ md5sum file1.txt
+1ff38cc592c4c5d0c8e3ca38be8f1eb1  file1.txt
+[Documents]$
+The output can also be displayed in a BSD-style format using the --tag option.
+md5sum --tag file1.txt
+
+[Documents]$ md5sum --tag file1.txt
+MD5 (file1.txt) = 1ff38cc592c4c5d0c8e3ca38be8f1eb1
+[Documents]$
+
+
+
+
+
+echo "0 0 * * * md5sum -b /etc/crontab >> cron | md5sum cron > hashes | md5sum --check hashes" | crontab
+
+
+
+md5sum -b /etc/crontab >> cron
+md5sum cron > hashes
+md5sum --check hashes
+
+touch script4
+sudo nano script4
+md5sum cron
+md5sum new
+if cron != new
+crontab -l file
+echo "changes" file
+main -s 
+echo "" > script4
+
+
+
+ifxs !cron
+md5sum -b /etc/crontab >> cron
+
+if cat cron != md5sum -b /etc/crontab >> cron
