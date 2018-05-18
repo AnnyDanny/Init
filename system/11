@@ -11,7 +11,7 @@ $ df -h
 The df utility displays statistics about the amount of free disk space on the specified file system or on the file system of which file is a part. Values are displayed in 512-byte per block counts. -H option is called as “Human-readable” output. It use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to four or fewer using base 10 for sizes i.e. you see 30G (30 Gigabyte).
 
 OR
-$ df -k
+!!!!!$ df -k
 
 
 du shows how much space one ore more files or directories is using, enter:

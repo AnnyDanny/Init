@@ -11,4 +11,8 @@ nslookup slash16.org
 #dig +short slash16.org 
 #выводить только А-адреса
 #или через nslookup (только восьмерки без собаки):
-#nslookup slash16.org 8.8.8.8
+#
+
+
+
+!!!!!! nslookup slash16.org 8.8.8.8

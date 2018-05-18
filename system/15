@@ -1,11 +1,11 @@
 Before you can cancel a process using the kill command, you must know its PID number. The general format for the kill command is as follows:
 
-ps -> узнаем pid, потом:
-kill ProcessID
+!!! ps -> узнаем pid, потом:
+!!! kill ProcessID
 на пример: kill 1379 (номер процесса)
 
 
 This should kill all background processes:
 
-jobs -p | xargs kill -9
+!!!! jobs -p | xargs kill -9
 

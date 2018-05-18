@@ -1,5 +1,10 @@
 ввод:
+
  nslookup  52.85.182.57
+
+
+
+
  вывод:
  Server:		10.51.1.253
 Address:	10.51.1.253#53
@@ -33,3 +38,11 @@ provider of slash16.org is:
 85.52.in-addr.arpa	nameserver = x4.amazonaws.org.
 85.52.in-addr.arpa	nameserver = pdns1.ultradns.net.
 85.52.in-addr.arpa	nameserver = x3.amazonaws.org.
+
+
+
+
+!!!!!!!
+nslookup slash16.org
+nslookup ip from prev output
+answer: servers.net.

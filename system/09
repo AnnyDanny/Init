@@ -6,3 +6,4 @@ https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your
 
 
 $ who | cut -d' ' -f1 | sort | uniq
+users

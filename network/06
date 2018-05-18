@@ -30,3 +30,8 @@ $ host google.com
 $ dig google.com
 $ ping google.com
 $ nslookup your-domain.com
+
+
+
+
+!!!! /etc/resolv.conf

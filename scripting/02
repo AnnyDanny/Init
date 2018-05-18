@@ -75,9 +75,16 @@ sudo nano /etc/crontab, не?
 sudo apt-get update && sudo apt-get upgrade >> test | crontab test 04**4 /var/log/update_script.log
 
 
+
+
+
 еще один последний вариант:
-echo "apt-get update >> /var/log/update_script.log && apt-get upgrade >> /var/log/update_script.log" > file03
-echo "0 4 * * 1 sudo sh file03" | crontab
+echo "apt-get update >> /var/log/update_script.log && apt-get upgrade >> /var/log/update_script.log" > ~/file03
+echo "0 4 * * 1 sudo sh ~/file03" | crontab
+
+
+
+
 
 НЕ ЗАПИСЫВАЕТ ВЫВОД В log!!!!
 

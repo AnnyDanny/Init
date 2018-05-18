@@ -1,2 +1,4 @@
 /etc/init.d/ssh restart
 sudo nano systemctl restart ssh
+
+sudo service ssh restart

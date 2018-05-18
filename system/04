@@ -10,4 +10,8 @@ last reboot | less
 
 
 Or, better try:
+
 $ last reboot | head -1
+
+or uptime
+

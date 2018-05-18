@@ -1,4 +1,4 @@
-ps -ef |grep "sshd"
+!!!!!ps -ef |grep "sshd"
 this will give you the sshd server process info
 
 
@@ -11,3 +11,5 @@ systemctl status service_name
 Try:
 
 systemctl status postgres
+
+sudo service ssh status

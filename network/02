@@ -1,3 +1,1 @@
-/sbin/ifconfig en0 | grep inet 
-ifconfig en0 | grep inet
 ipconfig getifaddr en0 

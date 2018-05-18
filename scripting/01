@@ -36,7 +36,9 @@ grep user /etc/passwd -> for only path
 добавляем к предыдущему скрипту
 !!!!!
 
-w -sh | awk ' /'user'/ {print $1;exit}' && id -u user && grep user /etc/passwd 
+!!!! w -sh | awk ' /'user'/ {print $1;exit}' && id -u user && grep user /etc/passwd 
+or
+!!!! cat /etc/passwd | cut -d ":" -f1,3,6 --output-delimiter=" "
 
 !!!!
 

@@ -1,2 +1,4 @@
+nslookup 10.51.1.253
 nslookup ns1 
+type ns1
 ns1 - это типа сервера ip адреса 10.51.1.253

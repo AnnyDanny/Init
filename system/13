@@ -7,4 +7,6 @@ Either pass -A or -e option to show all processes on your server/workstation pow
 # ps -e
 
 
-top!
+!!!! top
+or
+!!!! ps -aux

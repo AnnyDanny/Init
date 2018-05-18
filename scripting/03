@@ -1,13 +1,14 @@
 Напишите сценарий, который отображает список файлов из папки, заданной как параметр, отсортированной по размеру.
 
-ls -lS
+!!!! ls -lS
+!!!! ls - S $1
 
 
 To exclude directories (and provided none of the file names or symlink targets contain newline characters):
 
-ls -lS | grep -v '^d' 
+!!!! ls -lS | grep -v '^d' 
 
-du -s * | sort -nr
+!!!! du -s * | sort -nr
 
 
 Сортируем папки по размеру:
