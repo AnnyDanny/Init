@@ -72,3 +72,52 @@ ifxs !cron
 md5sum -b /etc/crontab >> cron
 
 if cat cron != md5sum -b /etc/crontab >> cron
+
+
+
+vika:
+md5sum /etc/crontab > $1
+sudo crontab -e @midnight current = md5sum /etc/crontab && if  [ "$1" != $sum ]
+then user mail root "report" && md5sum /etc/crontab > $1 > $2
+chmod 755 $2
+mv $2 /etc/cron.daily
+crontab -l
+
+
+| cut -f1 -d' '
+f1 - со сдвигом право
+f2 - со свдвигом влево
+-d - удалить после какого-то символа
+
+I believe cmp will stop at the first byte difference:
+
+cmp --silent $old $new || echo "files are different"
+
+
+
+
+
+sudo sh filebash
+
+md5sum -b /etc/crontab | cut -f1 -d' ' > ~/c1;
+echo "md5sum -b /etc/crontab" > ~/cron;
+echo "0 0 * * * sudo sh cron | cut -f1 -d' ' > ~/c2 && cmp --silent ~/c1 ~/c2 || cat 1 | mail -s "report" root && cat /home/~/c2 > ~/c1" | crontab;
+
+crontab -l
+
+
+
+
+
+
+
+
+#if [test1 != test2]
+#then user mail - s root "report" && md5sum /etc/crontab > test1 > test2
+
+chmod 755 test2
+crontab -l
+
+
+
+

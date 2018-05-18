@@ -9,6 +9,8 @@ sudo apt-get update && sudo apt-get upgrade >> test; crontab 0 1 * * 5 /var/log/
 cat test
 
 
+
+
 01. sudo apt-get update
 02. sudo apt-get upgrade
 
@@ -76,6 +78,8 @@ sudo apt-get update && sudo apt-get upgrade >> test | crontab test 04**4 /var/lo
 еще один последний вариант:
 echo "apt-get update >> /var/log/update_script.log && apt-get upgrade >> /var/log/update_script.log" > file03
 echo "0 4 * * 1 sudo sh file03" | crontab
+
+НЕ ЗАПИСЫВАЕТ ВЫВОД В log!!!!
 
 /var/log/update_script.log" | crontab
 crontab - l - показывает содержимое файла
